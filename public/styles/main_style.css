@@ -1,0 +1,329 @@
+/* 
+    CSS affecting the main content of pages.
+*/
+body{
+    /* background-image: url('../src/exterior.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Arial';
+    margin: 0px;
+}
+
+.set-img {
+    background-image: url('../src/exterior.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+h1.home {
+    text-align: center;
+    color: #0e0e0e;
+    font-size: 100px;
+}
+
+/* h1, h2, h3{
+    color: white;
+}
+
+label{
+    color: white;
+} */
+
+main {
+    padding: 50px 100px;
+}
+
+.room-info{
+    font-size: larger;
+}
+
+/* 
+    Navigation bar CSS:
+*/
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 100px;
+    overflow: hidden;
+    background-color: #0e0e0e;
+  }
+  
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li.login {
+    float: right;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #393939;
+}
+
+/* Dropdown Menu CSS */
+.dropdown {
+    position: static; /* Don't know why this works.*/
+    display: inline-block;
+    }
+
+.dropbtn {
+    background-color: #0e0e0e;
+    color: white;
+    padding: 13.5px 16px; /* Fix top/bottom padding later*/
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #242424;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #09f;
+}
+
+
+/* 
+    Footer CSS:
+*/
+footer{
+    position: absolute;
+    bottom: 0;
+    margin: 0px;
+    width: 100%;
+    padding: 20px;
+    background-color: #0e0e0e;
+    color: white;
+    text-align: center;
+}
+
+/* 
+    Feedback message CSS:
+*/
+div.error{
+    width: 40%;
+    background-color: pink;
+    border-radius: 25px;
+    margin: 10px;
+    color: darkred;
+    font-size: smaller;
+}
+
+div.success{
+    padding: 10px;
+    width: 30%;
+    background-color: #8cdfac;
+    border-radius: 25px;
+    margin: 10px;
+    color: rgb(4, 77, 14);
+    font-size: larger;
+    text-align: center;
+}
+
+/* 
+    Star Rating CSS:
+*/
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.radio-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.radio-label {
+    cursor: pointer;
+    font-size: 0;
+    color: rgba(0,0,0,0.2);
+    transition: color 0.1s ease-in-out;
+}
+
+.radio-label:before {
+    content: "★";
+    display: inline-block;
+    font-size: 48px;
+}
+
+.radio-input:checked ~ .radio-label {
+    color: #3a3a3a;
+    color: #09f;
+}
+  
+.radio-label:hover,
+.radio-label:hover ~ .radio-label {
+    color: rgb(0, 120, 255);
+}
+  
+.radio-input:checked + .radio-label:hover,
+.radio-input:checked + .radio-label:hover ~ .radio-label,
+.radio-input:checked ~ .radio-label:hover,
+.radio-input:checked ~ .radio-label:hover ~ .radio-label,
+.radio-label:hover ~ .radio-input:checked ~ .radio-label {
+    color: rgb(0, 90, 255);
+}
+  
+  
+/* 
+    Styling for User Reviews:
+*/
+.review-container{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 50%;
+    padding: 10px;
+    margin: 25px 10px 25px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0px 0px;
+}
+
+.review-container div{
+    border: 1px solid black;
+    padding: 10px 10px
+}
+
+.review-container .name { grid-column: 1 / 0; }
+.review-container .date { grid-column: 1 / 0; }
+.review-container .rating { grid-column: 1 / 3; }
+.review-container .title { grid-column: 1 / 3;}
+.review-container .review { grid-column: 1 / 3; }
+
+/* 
+    Styling for Profile Card Content:
+*/
+.card{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 50%;
+    padding: 10px;
+    margin: 25px 10px 25px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0px 0px;
+}
+
+.card div{
+    border: 1px solid black;
+    padding: 10px 10px
+}
+
+/* 
+    Styling for Discount table:
+*/
+.discounts{
+    margin: 30px 50px;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.discounts th{
+    padding: 5px;
+    border-bottom: 2px solid #242424;
+    text-align: center;
+}
+
+.discounts td{
+    padding: 10px;
+    border-bottom: 1px solid #242424;
+    text-align: center;
+}
+
+a.btn-delete:link, a.btn-delete:visited{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.btn-delete:hover, a.btn-delete:active {
+    background-color: rgb(150, 0, 0);
+}
+
+
+/************************************** Room pages CSS ***********************************/
+:root {--border:.1rem solid rgba(0,0,0,.2); --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);}
+
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; scrollbar-color: #09f #333; scrollbar-width: thin;}
+
+html {overflow-x: hidden;}
+
+section {max-width: 1200px; margin: 0 auto; padding: 2rem;}
+
+.empty{ background-color: #fff; border-radius: .5rem; border: var(--border); padding: 1.5rem; font-size: 1.8rem; color: #eb4d4b; text-align: center; width: 100%; box-shadow: var(--box-shadow);}
+
+.option-btn{display: block; width: 100%;}
+
+.inline-btn{ margin-top: 1rem; text-align: center; padding: 1rem 3rem; font-size: 1.8rem; border-radius: .5rem; border: var(--border); color: #fff; cursor: pointer; text-transform: capitalize; display: inline-block; background-color: #333;}
+   .inline-option-btn{ margin-top: 1rem; text-align: center; padding: 1rem 3rem; font-size: 1.8rem; border-radius: .5rem; border: var(--border); color: #333; cursor: pointer; text-transform: capitalize; background-color: #fff; display: inline-block;}
+   .inline-btn:hover, .inline-option-btn:hover {background-color: #999;}
+
+.flex-btn{ display: flex; align-items: center; column-gap: 1.5rem; justify-content: space-between; flex-wrap: wrap;}
+
+.header {position: sticky; top: 0; left: 0; right: 0; background-color: #333; z-index: 1000;}
+   .header .flex {display: flex; align-items: center; justify-content: space-between; position: relative;}
+   .header .flex .logo {font-size: 2.5rem; color: #fff;}
+   .header .flex .navbar #user-btn, .header .flex .navbar a {height: 4.2rem; width: 10.5rem; line-height: 4.2rem; font-size: 2rem; color: #333; background-color: #fff; border-radius: .5rem; text-align: center; margin-left: .5rem; cursor: pointer;}
+   .header .flex .navbar #user-btn:hover,
+   .header .flex .navbar a:hover {background-color: #999; color: #fff;}
+
+.base-room .box-container {display: grid; grid-template-columns: repeat(auto-fit, 35rem); gap: 1.5rem; align-items: flex-start; justify-content: center;}
+   .base-room .box-container .box {background-color: #fff; box-shadow: var(--box-shadow); border-radius: .5rem; padding: 2rem; border: var(--border); overflow-x: hidden;}
+   .base-room .box-container .box .image {width: 100%; height: 20rem; border-radius: .5rem; object-fit: cover; margin-bottom: 1.5rem;}
+   .base-room .box-container .box .title {font-size: 2rem; color: #333; text-overflow: ellipsis; overflow-x: hidden;}
+   .base-room .box-container .box .kwarto {font-size: 1.7rem; padding: 1rem 0;}
+   .base-room .box-container .box .kwarto i {color: #fff;}
+   .base-room .box-container .box .kwarto span {color: #999;}
+
+.icon{width: 40%; height: 40%; align-content: center;}
+
+.roomview .row {display: flex; align-items: center; flex-wrap: wrap; gap: 2rem; background-color: #fff; box-shadow: var(--box-shadow); border: var(--border); background-color: #fff; padding: 2rem; border-radius: .5rem;}
+   .roomview .row .col {flex: 1 1 40rem;}
+   .roomview .row .col .image {width: 100%; height: 30rem; border-radius: .5rem; object-fit: cover; margin-bottom: 1.5rem;}
+   .roomview .row .col .title {font-size: 2rem; color: #333;}
+   .roomview .row .col .flex {display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-evenly;}
+   .roomview .row .col .flex .kwarto {text-align: center;}
+   .roomview .row .col .flex .kwarto h3 {font-size: 7rem; color: #333;}
+   .roomview .row .col .flex .kwarto i {font-size: 3rem;}
+   .roomview .row .col .flex .kwarto p {font-size: 1.8rem; color: #999; padding-top: 1rem;}
+   .roomview .row .col .flex .specs {font-size: 2rem;}
+   .roomview .row .col .flex .specs p{ padding: .3rem 0;}
+   .roomview .row .col .flex .specs p i{color: #fff;}
+   .view-post .row .col .flex .specs p span{color: #999;}
